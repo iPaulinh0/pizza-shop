@@ -47,7 +47,7 @@ export function SignUp() {
 
       <div className="p-8">
 
-        <Button variant={"link"} asChild  className="absolute right-8 top-8">
+        <Button variant={"link"} asChild  className="absolute right-8 top-8 max-[736px]:hidden">
           <Link to="/sign-in">
             Já tem conta? Faça Login!
           </Link>
@@ -79,6 +79,12 @@ export function SignUp() {
             </div>
 
             <Button disabled={isSubmitting} type="submit" className="w-full">Finalizar Cadastro</Button>
+
+            <Button variant={"link"} asChild className="w-full min-[736px]:hidden">
+              <Link to="/sign-in">
+                Já tem conta? Faça Login!
+              </Link>
+            </Button>
 
             <p className="px-6 text-center text-sm leading-relaxed text-muted-foreground">
               Ao continuar, você concorda com nossos {' '}
